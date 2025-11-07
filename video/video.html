@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PeerJS Video Call</title>
+  </head>
+  <body>
+    <h2>PeerJS Video Calling App</h2>
+
+    <div>
+      <p>Your Peer ID: <span id="peer-id">...</span></p>
+      <input type="text" id="connect-to-id" placeholder="Enter peer ID to call" />
+      <button id="call-btn">Start Call</button>
+      <button id="end-call-btn">End Call</button>
+    </div>
+
+    <hr />
+
+    <div style="display: flex; gap: 20px;">
+      <div>
+        <h3>You</h3>
+        <video id="my-video" autoplay muted playsinline width="300"></video>
+      </div>
+      <div>
+        <h3>Partner</h3>
+        <video id="partner-video" autoplay playsinline width="300"></video>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
